@@ -4,7 +4,7 @@ info:
   description: "CBDB Swagger UI"
   version: "1.0.5"
   title: "Swagger Petstore"
-  termsOfService: "http://swagger.io/terms/"
+  termsOfService: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
   contact:
     email: "hongsuwang@fas.harvard.edu"
   license:
@@ -107,5 +107,5 @@ definitions:
     xml:
       name: "Person"
 externalDocs:
-  description: "Find out more about Swagger"
-  url: "http://swagger.io"
+  description: "Find out more about CBDB"
+  url: "https://projects.iq.harvard.edu/cbdb"
