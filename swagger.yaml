@@ -83,7 +83,7 @@ definitions:
         type: "string"
     xml:
       name: "Category"
-  Pet:
+  Person:
     type: "object"
     required:
     - "name"
