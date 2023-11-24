@@ -67,6 +67,13 @@ paths:
         required: true
         type: "string"
         format: "string"
+      responses:
+        200:
+          description: "successful operation"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Person not found"        
       security:
       - api_key: []
 securityDefinitions:
