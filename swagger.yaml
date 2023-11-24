@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   description: "CBDB Swagger UI"
   version: "1.0.5"
-  title: "Swagger Petstore"
+  title: "Swagger CBDB"
   termsOfService: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
   contact:
     email: "hongsuwang@fas.harvard.edu"
