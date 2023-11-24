@@ -35,10 +35,38 @@ paths:
       parameters:
       - name: "personid"
         in: "path"
-        description: "ID of personP to return"
+        description: "ID of person to return"
         required: true
         type: "integer"
         format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Person"
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Person not found"
+      security:
+      - api_key: []
+  /person.php?name={personname}&o=json:
+    get:
+      tags:
+      - "person"
+      summary: "Find person by name"
+      description: "Returns person information by name"
+      operationId: "getPersonByName"
+      produces:
+      - "application/json"
+      - "application/xml"
+      parameters:
+      - name: "personname"
+        in: "path"
+        description: "ID of person to return"
+        required: true
+        type: "string"
+        format: "string"
       responses:
         200:
           description: "successful operation"
@@ -63,26 +91,6 @@ securityDefinitions:
       read:pets: "read your pets"
       write:pets: "modify pets in your account"
 definitions:
-  ApiResponse:
-    type: "object"
-    properties:
-      code:
-        type: "integer"
-        format: "int32"
-      type:
-        type: "string"
-      message:
-        type: "string"
-  Category:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      name:
-        type: "string"
-    xml:
-      name: "Category"
   Person:
     type: "object"
     required:
@@ -122,16 +130,6 @@ definitions:
         - "sold"
     xml:
       name: "Pet"
-  Tag:
-    type: "object"
-    properties:
-      id:
-        type: "integer"
-        format: "int64"
-      name:
-        type: "string"
-    xml:
-      name: "Tag"
 externalDocs:
   description: "Find out more about Swagger"
   url: "http://swagger.io"
