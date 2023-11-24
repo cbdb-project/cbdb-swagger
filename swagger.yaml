@@ -10,7 +10,7 @@ info:
   license:
     name: "CC BY-NC-SA 4.0 DEED"
     url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-host: "cbdb.fas.harvard.edu/cbdbapi"
+host: "cbdb.fas.harvard.edu"
 basePath: "/cbdbapi"
 tags:
 - name: "person"
@@ -22,7 +22,7 @@ schemes:
 - "https"
 - "http"
 paths:
-  /person.php?id={personid}:
+  /person.php?id={personid}&o=json:
     get:
       tags:
       - "person"
