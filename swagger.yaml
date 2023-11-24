@@ -10,7 +10,7 @@ info:
   license:
     name: "CC BY-NC-SA 4.0 DEED"
     url: "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-host: "https://projects.iq.harvard.edu/cbdb/"
+host: "https://projects.iq.harvard.edu/cbdb"
 basePath: "/cbdbapi"
 tags:
 - name: "person"
