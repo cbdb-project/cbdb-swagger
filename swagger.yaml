@@ -17,7 +17,7 @@ tags:
   description: "Query person information"
   externalDocs:
     description: "Find out more"
-    url: "https://projects.iq.harvard.edu/cbdb/cbdb-api"
+    url: "cbdb.fas.harvard.edu/cbdbapi"
 schemes:
 - "https"
 - "http"
