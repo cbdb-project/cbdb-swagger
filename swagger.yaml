@@ -26,11 +26,35 @@ paths:
     get:
       tags:
       - "person"
-      summary: "Find person by ID"
-      description: "Returns a single person"
-      operationId: "getPersonById"
+      summary: "Find person json data by ID"
+      description: "Returns a single person using json"
+      operationId: "getPersonJSONById"
       produces:
       - "application/json"
+      parameters:
+      - name: "personid"
+        in: "path"
+        description: "ID of person to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Person"
+        404:
+          description: "Person not found"
+      security:
+      - api_key: []
+  /person.php?id={personid}&o=xml:
+    get:
+      tags:
+      - "person"
+      summary: "Find person xml data by ID"
+      description: "Returns a single person using xml"
+      operationId: "getPersonXMLById"
+      produces:
       - "application/xml"
       parameters:
       - name: "personid"
@@ -52,11 +76,35 @@ paths:
     get:
       tags:
       - "person"
-      summary: "Find person by name"
-      description: "Returns person information by name"
-      operationId: "getPersonByName"
+      summary: "Find person json data by name"
+      description: "Returns person json information by name"
+      operationId: "getPersonJSONByName"
       produces:
       - "application/json"
+      parameters:
+      - name: "personname"
+        in: "path"
+        description: "ID of person to return"
+        required: true
+        type: "string"
+        format: "string"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Person"
+        404:
+          description: "Person not found"        
+      security:
+      - api_key: []
+  /person.php?name={personname}&o=xml:
+    get:
+      tags:
+      - "person"
+      summary: "Find person xml data by name"
+      description: "Returns person xml information by name"
+      operationId: "getPersonXMLByName"
+      produces:
       - "application/xml"
       parameters:
       - name: "personname"
